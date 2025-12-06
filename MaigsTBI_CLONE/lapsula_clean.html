@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lapsula</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <main class="w-full max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-10">
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold">ADNU - MAGIS TBI</h1>
+        <p class="mt-2 text-gray-700">
+          2/F Matteo Ricci S.J. Hall, Ateneo de Naga University, P. Santos Ave.,
+          Brgy. Bagumbayan Sur, Naga City, Camarines Sur, Philippines
+        </p>
+      </header>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold">ADNU – MAGIS TBI</h2>
+        <p class="mt-3">
+          ADNU – MAGIS TBI (Technology Business Incubator) is Ateneo de Naga
+          University’s innovation hub, designed to launch and accelerate bold,
+          tech-driven startups. We empower growth-oriented founders by
+          connecting them to markets, mentors, and meaningful resources—turning
+          big ideas into real-world impact.
+        </p>
+        <p class="mt-3">
+          With a clear focus on scale and sustainability, we provide the tools,
+          space, and support needed to take startups from concept to
+          commercialization.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h3 class="text-xl font-semibold">🔔 Please read before booking:</h3>
+        <ol class="mt-3 pl-6 list-decimal space-y-2">
+          <li>
+            Choose Your Spot Wisely | View our space layout to find your ideal
+            seat:
+            <a
+              href="https://tinyurl.com/MagisTBILayout"
+              target="_blank"
+              class="text-blue-600 underline"
+              >tinyurl.com/MagisTBILayout</a
+            >
+          </li>
+          <li>
+            Know the Rules | For your review:
+            <a
+              href="https://tinyurl.com/MagisTBIHouseRules"
+              target="_blank"
+              class="text-blue-600 underline"
+              >tinyurl.com/MagisTBIHouseRules</a
+            >
+          </li>
+          <li>
+            Payment Policy: No payment, no usage. This policy will be strictly
+            enforced.
+          </li>
+          <li>
+            Reservation Policy: All bookings are by reservation only. If you do
+            not arrive within 30 minutes of your scheduled time without prior
+            notice, your slot and payment will be forfeited.
+          </li>
+        </ol>
+      </section>
+
+      <section class="mb-10">
+        <!-- Details Modal -->
+        <div id="detailsModal" class="fixed inset-0 z-50 hidden">
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div
+            class="relative mx-auto mt-20 w-full max-w-3xl rounded-lg bg-white shadow-lg"
+          >
+            <div class="flex items-center justify-between border-b px-6 py-4">
+              <h4 class="text-xl font-semibold">Enter Booking Details</h4>
+              <button
+                id="detailsClose"
+                class="rounded-md px-3 py-1 text-sm text-gray-600 hover:bg-gray-100"
+              >
+                Close
+              </button>
+            </div>
+            <div class="px-6 py-5 space-y-6 max-h-[70vh] overflow-y-auto">
+              <div class="rounded-md border bg-gray-50 p-4">
+                <p class="text-sm text-gray-700">Summary</p>
+                <div
+                  id="detailsSummary"
+                  class="mt-1 text-sm font-medium text-gray-900"
+                >
+                  Date — Time — Price
+                </div>
+              </div>
+              <form id="detailsForm" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm text-gray-700">Fullname</label>
+                    <input
+                      type="text"
+                      required
+                      class="mt-1 w-full rounded-md border px-3 py-2"
+                      name="fullname"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm text-gray-700">Email</label>
+                    <input
+                      type="email"
+                      required
+                      class="mt-1 w-full rounded-md border px-3 py-2"
+                      name="email"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm text-gray-700"
+                      >Phone number</label
+                    >
+                    <input
+                      type="tel"
+                      required
+                      class="mt-1 w-full rounded-md border px-3 py-2"
+                      name="phone"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm text-gray-700"
+                      >Company/School/Organization</label
+                    >
+                    <input
+                      type="text"
+                      class="mt-1 w-full rounded-md border px-3 py-2"
+                      name="org"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm text-gray-700"
+                      >Role/Designation</label
+                    >
+                    <input
+                      type="text"
+                      class="mt-1 w-full rounded-md border px-3 py-2"
+                      name="role"
+                    />
+                  </div>
+                  <div>
+                    <label class="block text-sm text-gray-700"
+                      >Facebook Account</label
+                    >
+                    <input
+                      type="text"
+                      class="mt-1 w-full rounded-md border px-3 py-2"
+                      name="facebook"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-700"
+                    >Are you a startup incubatee at ADNU - MAGIS TBI?</label
+                  >
+                  <div class="mt-2 flex items-center gap-4">
+                    <label
+                      class="inline-flex items-center gap-2 text-sm text-gray-700"
+                      ><input
+                        type="radio"
+                        name="incubatee"
+                        value="Yes"
+                        class="rounded"
+                      />
+                      Yes</label
+                    >
+                    <label
+                      class="inline-flex items-center gap-2 text-sm text-gray-700"
+                      ><input
+                        type="radio"
+                        name="incubatee"
+                        value="No"
+                        class="rounded"
+                      />
+                      No</label
+                    >
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-700"
+                    >If yes, what is your startup/team name?</label
+                  >
+                  <input
+                    type="text"
+                    class="mt-1 w-full rounded-md border px-3 py-2"
+                    name="startup"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm text-gray-700"
+                    >Notes/Instructions</label
+                  >
+                  <textarea
+                    class="mt-1 w-full rounded-md border px-3 py-2"
+                    rows="3"
+                    name="notes"
+                  ></textarea>
+                </div>
+                <div class="rounded-md border p-4">
+                  <p class="text-sm font-medium text-gray-800">
+                    Payment Details (GCash)
+                  </p>
+                  <p class="mt-1 text-sm text-gray-700">
+                    Please pay via GCash to
+                    <span class="font-medium">Ryan Alvin Mercado</span>,
+                    <span class="font-mono">09199924238</span>. Send proof of
+                    payment to
+                    <span class="font-mono">magis_tbi@gbox.adnu.edu.ph</span>
+                    with subject "MAGIS TBI RESERVATION".
+                  </p>
+                  <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm text-gray-700"
+                        >GCash Reference No.</label
+                      >
+                      <input
+                        type="text"
+                        class="mt-1 w-full rounded-md border px-3 py-2"
+                        name="gcash_ref"
+                      />
+                    </div>
+                    <div>
+                      <label class="block text-sm text-gray-700"
+                        >Amount Paid (₱)</label
+                      >
+                      <input
+                        type="number"
+                        min="0"
+                        step="1"
+                        class="mt-1 w-full rounded-md border px-3 py-2"
+                        name="amount"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-end gap-3 border-t pt-4">
+                  <button
+                    type="button"
+                    id="detailsBack"
+                    class="rounded-md px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="submit"
+                    class="rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <p>
+          <strong>You may pay using cash or GCash for your booking.</strong>
+          Payment must be done at least 5 hours or earlier before the booking.
+          Please send proof of payment to
+          <a
+            href="mailto:magis_tbi@gbox.adnu.edu.ph"
+            class="text-blue-600 underline"
+            >magis_tbi@gbox.adnu.edu.ph</a
+          >
+          with the subject, "MAGIS TBI RESERVATION."
+        </p>
+        <p class="mt-3">
+          <strong>GCash</strong> | Ryan Alvin Mercado, 09199924238
+        </p>
+      </section>
+
+      <!-- Cards helper classes: text-[20px] on each card for consistent scale -->
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold mb-4">
+          Co-Working Space - High Desk
+        </h3>
+        <div class="space-y-5">
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-start justify-between gap-6">
+              <div>
+                <p class="font-semibold">🪑 High Desk (1 Hour)</p>
+                <p class="mt-2 text-gray-700">
+                  Need a spot to plug in, focus, and get stuff done? Our High
+                  Desk Seats are made for solo hustlers, freelancers, remote
+                  workers, and startup founders who want a comfy perch with a
+                  pro vibe. Choose a seat number upon booking.
+                </p>
+                <div class="flex items-center gap-6 mt-3 text-gray-600">
+                  <span class="flex items-center gap-1">⏱ 1 hour</span>
+                  <span class="flex items-center gap-1">💳 ₱60</span>
+                </div>
+              </div>
+              <a
+                href="#"
+                data-item="High Desk (1 Hour)"
+                data-price="60"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">🪑🪑 High Desk (4 Hours)</p>
+              <a
+                href="#"
+                data-item="High Desk (4 Hours)"
+                data-price="200"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 4 hours</span>
+                <span class="flex items-center gap-1">💳 ₱200</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">🪑🪑🪑 High Desk (Whole Day)</p>
+              <a
+                href="#"
+                data-item="High Desk (Whole Day)"
+                data-price="350"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 8 hours</span>
+                <span class="flex items-center gap-1">💳 ₱350</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold mb-4">
+          Co-Working Space - Solo Desk
+        </h3>
+        <div class="space-y-5">
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-start justify-between gap-6">
+              <div>
+                <p class="font-semibold">👤 Solo Desk (1 Hour)</p>
+                <p class="mt-2 text-gray-700">
+                  Need a quiet corner to focus and do your thing? Our Solo Desk
+                  Seats are perfect for deep work, writing, designing, or just
+                  getting into your zone—no distractions, just good vibes.
+                  Choose a seat number upon booking.
+                </p>
+                <div class="flex items-center gap-6 mt-3 text-gray-600">
+                  <span class="flex items-center gap-1">⏱ 1 hour</span>
+                  <span class="flex items-center gap-1">💳 ₱60</span>
+                </div>
+              </div>
+              <a
+                href="#"
+                data-item="Solo Desk (1 Hour)"
+                data-price="60"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">👤👤 Solo Desk (4 Hours)</p>
+              <a
+                href="#"
+                data-item="Solo Desk (4 Hours)"
+                data-price="200"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 4 hours</span>
+                <span class="flex items-center gap-1">💳 ₱200</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">👤👤👤 Solo Desk (8 Hours)</p>
+              <a
+                href="#"
+                data-item="Solo Desk (8 Hours)"
+                data-price="350"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 8 hours</span>
+                <span class="flex items-center gap-1">💳 ₱350</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold mb-4">
+          Co-Working Space - Shared Desk Seat
+        </h3>
+        <div class="space-y-5">
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-start justify-between gap-6">
+              <div>
+                <p class="font-semibold">🤝 Shared Desk (1 Hour)</p>
+                <p class="mt-2 text-gray-700">
+                  For freelancers, remote workers, and startup founders who want
+                  a comfy perch with a pro vibe—our Shared Desk Seats offer the
+                  perfect balance of focus and community. Choose a seat number
+                  upon booking.
+                </p>
+                <div class="flex items-center gap-6 mt-3 text-gray-600">
+                  <span class="flex items-center gap-1">⏱ 1 hour</span>
+                  <span class="flex items-center gap-1">💳 ₱60</span>
+                </div>
+              </div>
+              <a
+                href="#"
+                data-item="Shared Desk (1 Hour)"
+                data-price="60"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">🤝🤝 Shared Desk (4 Hours)</p>
+              <a
+                href="#"
+                data-item="Shared Desk (4 Hours)"
+                data-price="200"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 4 hours</span>
+                <span class="flex items-center gap-1">💳 ₱200</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">🤝🤝🤝 Shared Desk (Whole Day)</p>
+              <a
+                href="#"
+                data-item="Shared Desk (Whole Day)"
+                data-price="350"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 8 hours</span>
+                <span class="flex items-center gap-1">💳 ₱350</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold mb-4">Board Room</h3>
+        <div class="space-y-5">
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-start justify-between gap-6">
+              <div>
+                <p class="font-semibold">🧠 Board Room (1 Hour)</p>
+                <p class="mt-2 text-gray-700">
+                  Book the Board Room for your next big meeting, pitch, or team
+                  huddle! It’s the perfect spot for focused conversations,
+                  planning sessions, or making things official with clients or
+                  collaborators.
+                </p>
+                <div class="flex items-center gap-6 mt-3 text-gray-600">
+                  <span class="flex items-center gap-1">⏱ 1 hour</span>
+                  <span class="flex items-center gap-1">💳 ₱500</span>
+                </div>
+              </div>
+              <a
+                href="#"
+                data-item="Board Room (1 Hour)"
+                data-price="500"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">🧠🧠 Board Room (Half Day - 4 Hours)</p>
+              <a
+                href="#"
+                data-item="Board Room (Half Day)"
+                data-price="1800"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 4 hours</span>
+                <span class="flex items-center gap-1">💳 ₱1800</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-center justify-between gap-6">
+              <p class="font-semibold">
+                🧠🧠🧠 Board Room (Whole Day - 8 Hours)
+              </p>
+              <a
+                href="#"
+                data-item="Board Room (Whole Day)"
+                data-price="3000"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+            <div class="px-5 pb-5">
+              <div class="flex items-center gap-6 text-gray-600">
+                <span class="flex items-center gap-1">⏱ 8 hours</span>
+                <span class="flex items-center gap-1">💳 ₱3000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h3 class="text-2xl font-semibold mb-4">
+          Whole Space Reservation (For events and functions)
+        </h3>
+        <div class="space-y-5">
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-start justify-between gap-6">
+              <div>
+                <p class="font-semibold">🌅 Roofdeck Space (4 Hours)</p>
+                <p class="mt-2 text-gray-700">
+                  Looking for a fresh, open-air venue that gets the startup
+                  energy? Our Rooftop Space is the perfect spot for launch
+                  events, mixers, mini demo days, creative workshops, or just
+                  good ol’ community hangouts.
+                </p>
+                <div class="flex items-center gap-6 mt-3 text-gray-600">
+                  <span class="flex items-center gap-1">⏱ 4 hours</span>
+                  <span class="flex items-center gap-1">💳 ₱4000</span>
+                </div>
+              </div>
+              <a
+                href="#"
+                data-item="Roofdeck Space (4 Hours)"
+                data-price="4000"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+          </div>
+          <div
+            class="rounded-lg border border-gray-200 bg-white shadow-sm text-[20px] leading-relaxed"
+          >
+            <div class="p-5 flex items-start justify-between gap-6">
+              <div>
+                <p class="font-semibold">👥 Co-Working Space (4 Hours)</p>
+                <p class="mt-2 text-gray-700">
+                  Hosting a startup event, bootcamp, hackathon, or creative
+                  collab session? Take over the entire MAGIS TBI Co-Working
+                  Space and make it your playground for innovation, connection,
+                  and next-level ideas.
+                </p>
+                <div class="flex items-center gap-6 mt-3 text-gray-600">
+                  <span class="flex items-center gap-1">⏱ 4 hours</span>
+                  <span class="flex items-center gap-1">💳 ₱4000</span>
+                </div>
+              </div>
+              <a
+                href="#"
+                data-item="Co-Working Space (4 Hours)"
+                data-price="4000"
+                class="inline-flex items-center justify-center whitespace-nowrap flex-none w-32 rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+                >Book now</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div
+        class="relative mx-auto mt-24 w-full max-w-3xl rounded-lg bg-white shadow-lg"
+      >
+        <div class="flex items-center justify-between border-b px-6 py-4">
+          <h4 class="text-xl font-semibold">Book a Slot</h4>
+          <button
+            id="bookingClose"
+            class="rounded-md px-3 py-1 text-sm text-gray-600 hover:bg-gray-100"
+          >
+            Close
+          </button>
+        </div>
+        <div class="px-6 py-5 space-y-6">
+          <div>
+            <p class="text-sm font-medium text-gray-700 mb-2">Pick a date</p>
+            <div class="flex items-center gap-2">
+              <button
+                id="calPrev"
+                class="rounded-md border px-2 py-2 text-gray-700 hover:bg-gray-100"
+                aria-label="Previous days"
+              >
+                ◀
+              </button>
+              <div
+                id="calendarRow"
+                class="flex gap-2 overflow-x-auto no-scrollbar py-2 scroll-smooth snap-x snap-mandatory w-full"
+              ></div>
+              <button
+                id="calNext"
+                class="rounded-md border px-2 py-2 text-gray-700 hover:bg-gray-100"
+                aria-label="Next days"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-medium text-gray-700 mb-2">Choose a desk</p>
+            <div class="grid grid-cols-6 gap-2">
+              <button
+                class="desk-btn rounded-md border px-3 py-2 hover:bg-blue-50"
+                data-desk="1"
+              >
+                Desk 1
+              </button>
+              <button
+                class="desk-btn rounded-md border px-3 py-2 hover:bg-blue-50"
+                data-desk="2"
+              >
+                Desk 2
+              </button>
+              <button
+                class="desk-btn rounded-md border px-3 py-2 hover:bg-blue-50"
+                data-desk="3"
+              >
+                Desk 3
+              </button>
+              <button
+                class="desk-btn rounded-md border px-3 py-2 hover:bg-blue-50"
+                data-desk="4"
+              >
+                Desk 4
+              </button>
+              <button
+                class="desk-btn rounded-md border px-3 py-2 hover:bg-blue-50"
+                data-desk="5"
+              >
+                Desk 5
+              </button>
+              <button
+                class="desk-btn rounded-md border px-3 py-2 hover:bg-blue-50"
+                data-desk="6"
+              >
+                Desk 6
+              </button>
+            </div>
+          </div>
+          <p class="text-sm font-medium text-gray-700 mb-2">Available times</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <p class="text-xs font-medium text-gray-600 mb-2">Morning</p>
+              <div id="timeSlotsMorning" class="flex flex-wrap gap-2"></div>
+            </div>
+            <div>
+              <p class="text-xs font-medium text-gray-600 mb-2">Afternoon</p>
+              <div id="timeSlotsAfternoon" class="flex flex-wrap gap-2"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between border-t pt-4">
+            <div id="bookingSummary" class="text-sm text-gray-700">
+              No selection yet.
+            </div>
+            <button
+              id="bookingConfirm"
+              class="inline-flex items-center justify-center rounded-md bg-blue-600 px-5 py-2.5 text-white font-medium hover:bg-blue-700"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Hide scrollbar utility
+      (function () {
+        const style = document.createElement("style");
+        style.textContent = `.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}`;
+        document.head.appendChild(style);
+      })();
+      // Open modal on any Book now, capture item and price
+      let selectedItem = null;
+      let selectedPrice = null;
+      document.querySelectorAll('a[href="#"]').forEach((btn) => {
+        if (btn.textContent.trim().toLowerCase() === "book now") {
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            selectedItem = btn.dataset.item || null;
+            selectedPrice = btn.dataset.price || null;
+            document.getElementById("bookingModal").classList.remove("hidden");
+          });
+        }
+      });
+      // Close modal
+      document.getElementById("bookingClose").addEventListener("click", () => {
+        document.getElementById("bookingModal").classList.add("hidden");
+      });
+      document.getElementById("bookingModal").addEventListener("click", (e) => {
+        if (e.target.id === "bookingModal") {
+          document.getElementById("bookingModal").classList.add("hidden");
+        }
+      });
+      // Calendar: sliding window with minimal styling & interactions
+      const calendarRow = document.getElementById("calendarRow");
+      const calPrev = document.getElementById("calPrev");
+      const calNext = document.getElementById("calNext");
+      const DAY_MS = 24 * 60 * 60 * 1000;
+      let startDate = new Date();
+      startDate.setHours(0, 0, 0, 0);
+      let windowSize = 14;
+
+      function makeDateBtn(d) {
+        const label = d.toLocaleDateString(undefined, {
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+        });
+        const btn = document.createElement("button");
+        const isToday = d.toDateString() === new Date().toDateString();
+        btn.className =
+          "date-btn snap-start rounded-full border border-gray-300 px-3 py-1.5 text-xs md:text-sm leading-none text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300";
+        if (isToday) btn.classList.add("border-gray-500");
+        btn.textContent = label;
+        btn.dataset.date = new Date(d.getTime()).toISOString().slice(0, 10);
+        return btn;
+      }
+
+      function renderCalendar() {
+        calendarRow.innerHTML = "";
+        for (let i = 0; i < windowSize; i++) {
+          const d = new Date(startDate.getTime() + i * DAY_MS);
+          calendarRow.appendChild(makeDateBtn(d));
+        }
+        // rebind exclusives after render
+        bindExclusive(".date-btn", "date");
+      }
+
+      renderCalendar();
+
+      function shiftWindow(days) {
+        startDate = new Date(startDate.getTime() + days * DAY_MS);
+        renderCalendar();
+        // keep smooth UX by centering scroll
+        calendarRow.scrollTo({ left: 0, behavior: "smooth" });
+      }
+
+      calPrev.addEventListener("click", () => shiftWindow(-windowSize));
+      calNext.addEventListener("click", () => shiftWindow(windowSize));
+
+      // Drag to scroll (mouse/touch)
+      (function () {
+        let isDown = false,
+          startX = 0,
+          scrollLeft = 0;
+        calendarRow.addEventListener("mousedown", (e) => {
+          isDown = true;
+          startX = e.pageX - calendarRow.offsetLeft;
+          scrollLeft = calendarRow.scrollLeft;
+          calendarRow.classList.add("cursor-grabbing");
+        });
+        calendarRow.addEventListener("mouseleave", () => {
+          isDown = false;
+          calendarRow.classList.remove("cursor-grabbing");
+        });
+        calendarRow.addEventListener("mouseup", () => {
+          isDown = false;
+          calendarRow.classList.remove("cursor-grabbing");
+        });
+        calendarRow.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - calendarRow.offsetLeft;
+          const walk = x - startX;
+          calendarRow.scrollLeft = scrollLeft - walk;
+        });
+        // touch
+        let touchStartX = 0,
+          touchScrollLeft = 0;
+        calendarRow.addEventListener(
+          "touchstart",
+          (e) => {
+            const t = e.touches[0];
+            touchStartX = t.pageX;
+            touchScrollLeft = calendarRow.scrollLeft;
+          },
+          { passive: true }
+        );
+        calendarRow.addEventListener(
+          "touchmove",
+          (e) => {
+            const t = e.touches[0];
+            const walk = t.pageX - touchStartX;
+            calendarRow.scrollLeft = touchScrollLeft - walk;
+          },
+          { passive: true }
+        );
+      })();
+
+      // Keyboard navigation
+      calendarRow.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") calNext.click();
+        if (e.key === "ArrowLeft") calPrev.click();
+      });
+      calendarRow.setAttribute("tabindex", "0");
+      // Times: populate morning and afternoon groups
+      const timeSlotsMorning = document.getElementById("timeSlotsMorning");
+      const timeSlotsAfternoon = document.getElementById("timeSlotsAfternoon");
+      function formatHour(h) {
+        const suffix = h >= 12 ? "pm" : "am";
+        const hour12 = h % 12 === 0 ? 12 : h % 12;
+        return `${hour12}${suffix}`;
+      }
+      // Morning: 9am–12pm
+      for (let h = 9; h <= 12; h++) {
+        const btn = document.createElement("button");
+        btn.className =
+          "time-btn rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100";
+        btn.textContent = formatHour(h);
+        btn.dataset.time = h;
+        timeSlotsMorning.appendChild(btn);
+      }
+      // Afternoon: 1pm–5pm (13–17)
+      for (let h = 13; h <= 17; h++) {
+        const btn = document.createElement("button");
+        btn.className =
+          "time-btn rounded-md border border-gray-300 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100";
+        btn.textContent = formatHour(h);
+        btn.dataset.time = h;
+        timeSlotsAfternoon.appendChild(btn);
+      }
+      // Selection state
+      let sel = { date: null, desk: null, session: null, time: null };
+      const summary = document.getElementById("bookingSummary");
+      function updateSummary() {
+        const parts = [];
+        if (sel.date) parts.push(`Date: ${sel.date}`);
+        if (sel.desk) parts.push(`Desk: ${sel.desk}`);
+        if (sel.session) parts.push(`Session: ${sel.session}`);
+        if (sel.time) parts.push(`Time: ${formatHour(Number(sel.time))}`);
+        summary.textContent = parts.length
+          ? parts.join(" • ")
+          : "No selection yet.";
+      }
+      function bindExclusive(groupSelector, key) {
+        document.querySelectorAll(groupSelector).forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document
+              .querySelectorAll(groupSelector)
+              .forEach((b) =>
+                b.classList.remove(
+                  "bg-gray-900",
+                  "text-white",
+                  "ring-2",
+                  "ring-gray-300"
+                )
+              );
+            btn.classList.add(
+              "bg-gray-900",
+              "text-white",
+              "ring-2",
+              "ring-gray-300"
+            );
+            sel[key] =
+              btn.dataset[key] ||
+              btn.dataset.desk ||
+              btn.dataset.session ||
+              btn.dataset.time ||
+              btn.dataset.date;
+            updateSummary();
+          });
+        });
+      }
+      // date buttons are dynamically bound after renderCalendar
+      bindExclusive(".desk-btn", "desk");
+      bindExclusive(".session-btn", "session");
+      bindExclusive(".time-btn", "time");
+      // Confirm -> open details modal (do not change time code)
+      document
+        .getElementById("bookingConfirm")
+        .addEventListener("click", () => {
+          const date = sel.date || "(no date)";
+          const timeLabel = sel.time
+            ? formatHour(Number(sel.time))
+            : "(no time)";
+          const price = selectedPrice ? `₱${selectedPrice}` : "TBD";
+          const item = selectedItem ? ` — ${selectedItem}` : "";
+          document.getElementById(
+            "detailsSummary"
+          ).textContent = `${date} — ${timeLabel} — ${price}${item}`;
+          document.getElementById("bookingModal").classList.add("hidden");
+          document.getElementById("detailsModal").classList.remove("hidden");
+        });
+
+      // Details modal controls
+      document.getElementById("detailsClose").addEventListener("click", () => {
+        document.getElementById("detailsModal").classList.add("hidden");
+      });
+      document.getElementById("detailsBack").addEventListener("click", () => {
+        document.getElementById("detailsModal").classList.add("hidden");
+        document.getElementById("bookingModal").classList.remove("hidden");
+      });
+      document.getElementById("detailsForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = Object.fromEntries(new FormData(e.target).entries());
+        alert(
+          `Submitted!\n${document.getElementById("detailsSummary").textContent}`
+        );
+        document.getElementById("detailsModal").classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
