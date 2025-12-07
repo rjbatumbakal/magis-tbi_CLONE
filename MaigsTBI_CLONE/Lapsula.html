@@ -1,0 +1,2356 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://app.lapsula.com/book/adnu-magistbi -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="google" content="notranslate" />
+    <meta name="translator" content="no" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="https://app.lapsula.com/favicon.svg" />
+    <link rel="stylesheet" href="./Lapsula_files/all.min.css" />
+    <link rel="stylesheet" href="./Lapsula_files/brands.min.css" />
+    <link rel="stylesheet" href="./Lapsula_files/global.css" />
+    <title>Lapsula</title>
+    <link rel="stylesheet" href="./Lapsula_files/appsumo.oPCTA_5g.css" />
+    <style>
+      .messages-container.svelte-1c967tz {
+        width: 360px;
+        position: fixed;
+        z-index: 500;
+        bottom: 30px;
+        left: 30px;
+      }
+      @keyframes svelte-1c967tz-shrink {
+        0% {
+          width: 100%;
+        }
+        to {
+          width: 0%;
+        }
+      }
+      .progress-bar-animation.svelte-1c967tz {
+        animation: svelte-1c967tz-shrink 3s linear forwards;
+      }
+      .loader-container.svelte-1t9knci {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        z-index: 100;
+      }
+      .loader-container.svelte-1t9knci #loader:where(.svelte-1t9knci) {
+        animation: spinAround 0.5s infinite linear;
+        border: 2px solid hsl(0, 0%, 86%);
+        border-radius: 9999px;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        content: "";
+        display: block;
+        height: 1em;
+        position: relative;
+        width: 1em;
+        font-size: 5rem;
+        border-bottom-color: #00d1b2;
+        border-left-color: #00d1b2;
+      }
+      .is-vertical.svelte-1dz83ln {
+        display: flex;
+        flex: 1;
+        flex-direction: column !important;
+      }
+      .is-grid.svelte-1dz83ln {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem 1rem;
+        justify-items: center;
+      }
+      @keyframes svelte-veh8jc-breathing-primary {
+        0% {
+          box-shadow: 0 1px 1px #00d1b2;
+        }
+        50% {
+          box-shadow: 0 1px 25px #00d1b2;
+        }
+      }
+      @keyframes svelte-veh8jc-breathing-link {
+        0% {
+          box-shadow: 0 1px 1px #485fc7;
+        }
+        50% {
+          box-shadow: 0 1px 25px #485fc7;
+        }
+      }
+      @keyframes svelte-veh8jc-breathing-info {
+        0% {
+          box-shadow: 0 1px 1px #3e8ed0;
+        }
+        50% {
+          box-shadow: 0 1px 25px #3e8ed0;
+        }
+      }
+      @keyframes svelte-veh8jc-breathing-warning {
+        0% {
+          box-shadow: 0 1px 1px #ffe08a;
+        }
+        50% {
+          box-shadow: 0 1px 25px #ffe08a;
+        }
+      }
+      @keyframes svelte-veh8jc-breathing-danger {
+        0% {
+          box-shadow: 0 1px 1px #f14668;
+        }
+        50% {
+          box-shadow: 0 1px 25px #f14668;
+        }
+      }
+      @keyframes svelte-veh8jc-breathing-black {
+        0% {
+          box-shadow: 0 1px 1px #0a0a0a;
+        }
+        50% {
+          box-shadow: 0 1px 25px #0a0a0a;
+        }
+      }
+      .pack-title-primary.svelte-veh8jc {
+        background: #00d1b2;
+      }
+      .pack-title-link.svelte-veh8jc {
+        background: #485fc7;
+      }
+      .pack-title-info.svelte-veh8jc {
+        background: #3e8ed0;
+      }
+      .pack-title-warning.svelte-veh8jc {
+        background: #ffe08a;
+      }
+      .pack-title-danger.svelte-veh8jc {
+        background: #f14668;
+      }
+      .pack-title-black.svelte-veh8jc {
+        background: #0a0a0a;
+      }
+      .underline-on-hover.svelte-veh8jc:hover {
+        text-decoration: underline;
+      }
+      .card-header.svelte-veh8jc {
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+      }
+      .no-radius-top.svelte-veh8jc {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .pack.svelte-veh8jc {
+        width: 350px;
+        margin: 0 16px 32px;
+      }
+      .card-footer.svelte-veh8jc {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 0px;
+      }
+      .pack-title.svelte-veh8jc {
+        background: #00d1b2;
+      }
+      .has-georgia-font.svelte-veh8jc {
+        font-family: Georgia, BlinkMacSystemFont, -apple-system, Segoe UI,
+          Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+          Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+      .has-georgia-font.svelte-veh8jc button:where(.svelte-veh8jc) {
+        font-family: Georgia;
+      }
+      .pack-with-columns.svelte-veh8jc {
+        position: relative;
+        margin: 0 0 32px;
+        padding: 1.25rem;
+      }
+      .button__no-margin.svelte-veh8jc {
+        margin-bottom: 0 !important;
+      }
+      .pack-overlay.svelte-veh8jc {
+        visibility: hidden;
+        backdrop-filter: blur(3px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media screen and (max-width: 768px) {
+        .responsive-price.svelte-veh8jc {
+          padding-top: 1rem;
+        }
+      }
+      @media screen and (min-width: 769px), print {
+        .responsive-price.svelte-veh8jc {
+          padding: 0 3rem;
+        }
+      }
+      button.is-position-initial.svelte-veh8jc {
+        position: initial;
+      }
+      .logo.svelte-u4m3nt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img.svelte-u4m3nt {
+        width: 160px;
+        height: 160px;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+      .main.svelte-f0ftr6 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 6rem;
+        margin-right: 6rem;
+        padding-right: 32px;
+        padding-left: 32px;
+      }
+      @media screen and (max-width: 1023px) {
+        .main.svelte-f0ftr6 {
+          padding-right: 4px !important;
+          padding-left: 4px !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    </style>
+    <script src="./Lapsula_files/v3"></script>
+  </head>
+  <body>
+    <style>
+      astro-island,
+      astro-slot,
+      astro-static-slot {
+        display: contents;
+      }
+    </style>
+    <script>
+      (() => {
+        var e = async (t) => {
+          await (
+            await t()
+          )();
+        };
+        (self.Astro || (self.Astro = {})).load = e;
+        window.dispatchEvent(new Event("astro:load"));
+      })();
+    </script>
+    <script>
+      (() => {
+        var A = Object.defineProperty;
+        var g = (i, o, a) =>
+          o in i
+            ? A(i, o, {
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+                value: a,
+              })
+            : (i[o] = a);
+        var d = (i, o, a) => g(i, typeof o != "symbol" ? o + "" : o, a);
+        {
+          let i = {
+              0: (t) => m(t),
+              1: (t) => a(t),
+              2: (t) => new RegExp(t),
+              3: (t) => new Date(t),
+              4: (t) => new Map(a(t)),
+              5: (t) => new Set(a(t)),
+              6: (t) => BigInt(t),
+              7: (t) => new URL(t),
+              8: (t) => new Uint8Array(t),
+              9: (t) => new Uint16Array(t),
+              10: (t) => new Uint32Array(t),
+              11: (t) => (1 / 0) * t,
+            },
+            o = (t) => {
+              let [l, e] = t;
+              return l in i ? i[l](e) : void 0;
+            },
+            a = (t) => t.map(o),
+            m = (t) =>
+              typeof t != "object" || t === null
+                ? t
+                : Object.fromEntries(
+                    Object.entries(t).map(([l, e]) => [l, o(e)])
+                  );
+          class y extends HTMLElement {
+            constructor() {
+              super(...arguments);
+              d(this, "Component");
+              d(this, "hydrator");
+              d(this, "hydrate", async () => {
+                var b;
+                if (!this.hydrator || !this.isConnected) return;
+                let e =
+                  (b = this.parentElement) == null
+                    ? void 0
+                    : b.closest("astro-island[ssr]");
+                if (e) {
+                  e.addEventListener("astro:hydrate", this.hydrate, {
+                    once: !0,
+                  });
+                  return;
+                }
+                let c = this.querySelectorAll("astro-slot"),
+                  n = {},
+                  h = this.querySelectorAll("template[data-astro-template]");
+                for (let r of h) {
+                  let s = r.closest(this.tagName);
+                  s != null &&
+                    s.isSameNode(this) &&
+                    ((n[r.getAttribute("data-astro-template") || "default"] =
+                      r.innerHTML),
+                    r.remove());
+                }
+                for (let r of c) {
+                  let s = r.closest(this.tagName);
+                  s != null &&
+                    s.isSameNode(this) &&
+                    (n[r.getAttribute("name") || "default"] = r.innerHTML);
+                }
+                let p;
+                try {
+                  p = this.hasAttribute("props")
+                    ? m(JSON.parse(this.getAttribute("props")))
+                    : {};
+                } catch (r) {
+                  let s = this.getAttribute("component-url") || "<unknown>",
+                    v = this.getAttribute("component-export");
+                  throw (
+                    (v && (s += ` (export ${v})`),
+                    console.error(
+                      `[hydrate] Error parsing props for component ${s}`,
+                      this.getAttribute("props"),
+                      r
+                    ),
+                    r)
+                  );
+                }
+                let u;
+                await this.hydrator(this)(this.Component, p, n, {
+                  client: this.getAttribute("client"),
+                }),
+                  this.removeAttribute("ssr"),
+                  this.dispatchEvent(new CustomEvent("astro:hydrate"));
+              });
+              d(this, "unmount", () => {
+                this.isConnected ||
+                  this.dispatchEvent(new CustomEvent("astro:unmount"));
+              });
+            }
+            disconnectedCallback() {
+              document.removeEventListener("astro:after-swap", this.unmount),
+                document.addEventListener("astro:after-swap", this.unmount, {
+                  once: !0,
+                });
+            }
+            connectedCallback() {
+              if (
+                !this.hasAttribute("await-children") ||
+                document.readyState === "interactive" ||
+                document.readyState === "complete"
+              )
+                this.childrenConnectedCallback();
+              else {
+                let e = () => {
+                    document.removeEventListener("DOMContentLoaded", e),
+                      c.disconnect(),
+                      this.childrenConnectedCallback();
+                  },
+                  c = new MutationObserver(() => {
+                    var n;
+                    ((n = this.lastChild) == null ? void 0 : n.nodeType) ===
+                      Node.COMMENT_NODE &&
+                      this.lastChild.nodeValue === "astro:end" &&
+                      (this.lastChild.remove(), e());
+                  });
+                c.observe(this, { childList: !0 }),
+                  document.addEventListener("DOMContentLoaded", e);
+              }
+            }
+            async childrenConnectedCallback() {
+              let e = this.getAttribute("before-hydration-url");
+              e && (await import(e)), this.start();
+            }
+            async start() {
+              let e = JSON.parse(this.getAttribute("opts")),
+                c = this.getAttribute("client");
+              if (Astro[c] === void 0) {
+                window.addEventListener(`astro:${c}`, () => this.start(), {
+                  once: !0,
+                });
+                return;
+              }
+              try {
+                await Astro[c](
+                  async () => {
+                    let n = this.getAttribute("renderer-url"),
+                      [h, { default: p }] = await Promise.all([
+                        import(this.getAttribute("component-url")),
+                        n ? import(n) : () => () => {},
+                      ]),
+                      u = this.getAttribute("component-export") || "default";
+                    if (!u.includes(".")) this.Component = h[u];
+                    else {
+                      this.Component = h;
+                      for (let f of u.split("."))
+                        this.Component = this.Component[f];
+                    }
+                    return (this.hydrator = p), this.hydrate;
+                  },
+                  e,
+                  this
+                );
+              } catch (n) {
+                console.error(
+                  `[astro-island] Error hydrating ${this.getAttribute(
+                    "component-url"
+                  )}`,
+                  n
+                );
+              }
+            }
+            attributeChangedCallback() {
+              this.hydrate();
+            }
+          }
+          d(y, "observedAttributes", ["props"]),
+            customElements.get("astro-island") ||
+              customElements.define("astro-island", y);
+        }
+      })();
+    </script>
+    <astro-island
+      uid="1oJ533"
+      component-url="/_astro/LivePortalView.SZpSuCht.js"
+      component-export="default"
+      renderer-url="/_astro/client.svelte.CSdwCAe7.js"
+      props='{"shopId":[0,"cm9wfr0q60007m91wr8ub2ji3"],"shopPrefs":[0,{"tz":[0,"Asia/Manila"],"dateFormat":[0,"MM/dd/yyyy"],"isSundayFirstDayOfWeek":[0,false],"lang":[0,"en"],"currency":[0,"PHP"],"minCancelTime":[0,3600],"use24h":[0,false],"useSelfBranding":[0,true],"isBookingMemberChoosable":[0,true],"color":[0,"#3e8ed0"]}]}'
+      client="load"
+      opts='{"name":"LivePortalView","value":true}'
+      await-children=""
+      ><!--[--><!--[!--><!--]--><!---->
+      <div class="messages-container svelte-1c967tz"><!--[--><!--]--></div>
+      <!---->
+      <!---->
+      <div class="h-full">
+        <div class="flex flex-col min-h-screen">
+          <div class="flex-grow">
+            <section class="main px-0 svelte-f0ftr6">
+              <!---->
+              <div
+                class="box bg-transparent shadow-none pt-10 pb-5 px-0 md:px-auto"
+              >
+                <!--[!--><!---->
+                <div
+                  class="shop-container columns is-gapless mx-5 border-primary mb-0"
+                >
+                  <div
+                    class="column is-one-third is-flex is-flex-direction-column items-center gap-3"
+                  >
+                    <figure
+                      class="logo border rounded-full overflow-hidden svelte-u4m3nt"
+                    >
+                      <img
+                        class="is-background-white svelte-u4m3nt"
+                        src="./Lapsula_files/zyw4083c0rdf8iehqw2x46bo"
+                        alt="ADNU - MAGIS TBI"
+                      />
+                    </figure>
+                    <!---->
+                    <!----><!----><a
+                      target="_blank"
+                      class="items-center gap-2 has-text-link hover:underline"
+                      href="https://maps.app.goo.gl/xtHNEfyXLpSMjgHj8"
+                      data-tooltip="View in map"
+                    >
+                      <!-- Map Pin icon (Tailwind + SVG) -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        class="inline-block align-middle text-gray-600 w-4 h-4 mr-1 svelte-u4m3nt"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M12 21s-6-5.33-6-10a6 6 0 1112 0c0 4.67-6 10-6 10z"
+                        />
+                        <circle cx="12" cy="11" r="2.5" />
+                      </svg>
+                      2/F Matteo Ricci S.J. Hall, Ateneo de Naga University, P.
+                      Santos Ave., Brgy. Bagumbayan Sur, Naga City, Camarines
+                      Sur, Philippines</a
+                    ><!---->
+                    <!---->
+                    <div class="flex flex-row gap-2">
+                      <!---->
+                      <!---->
+                      <a
+                        target="_blank"
+                        class="has-tooltip-bottom mr-2"
+                        href="https://www.facebook.com/adnu.magis.tbi"
+                        data-tooltip="Facebook"
+                      >
+                        <!-- Facebook icon (Tailwind + SVG) -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          class="text-blue-600 w-4 h-4 svelte-veh8jc"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-2.9h2v-2.2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2h2.6l-.4 2.9H13v7A10 10 0 0022 12z"
+                          />
+                        </svg> </a
+                      ><!---->
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                  <div
+                    class="shop-info column is-two-thirds is-flex is-flex-direction-column"
+                  >
+                    <h1 class="text-3xl label">ADNU - MAGIS TBI</h1>
+                    <div class="text-lg text-gray-600 space-y-3">
+                      <p>
+                        ADNU – MAGIS TBI (Technology Business Incubator) is
+                        Ateneo de Naga University’s innovation hub, designed to
+                        launch and accelerate bold, tech-driven startups. We
+                        empower growth-oriented founders by connecting them to
+                        markets, mentors, and meaningful resources—turning big
+                        ideas into real-world impact.
+                      </p>
+
+                      <p>
+                        With a clear focus on scale and sustainability, we
+                        provide the tools, space, and support needed to take
+                        startups from concept to commercialization.
+                      </p>
+                      <p>---</p>
+                      <p class="font-semibold">
+                        🔔 𝙋𝙡𝙚𝙖𝙨𝙚 𝙧𝙚𝙖𝙙 𝙗𝙚𝙛𝙤𝙧𝙚 𝙗𝙤𝙤𝙠𝙞𝙣𝙜:
+                      </p>
+
+                      <p>
+                        1. 𝘾𝙝𝙤𝙤𝙨𝙚 𝙔𝙤𝙪𝙧 𝙎𝙥𝙤𝙩 𝙒𝙞𝙨𝙚𝙡𝙮 | View our space layout to
+                        find your ideal seat: 👉
+                        <a target="_blank">𝘁𝗶𝗻𝘆𝘂𝗿𝗹.𝗰𝗼𝗺/𝗠𝗮𝗴𝗶𝘀𝗧𝗕𝗜𝗟𝗮𝘆𝗼𝘂𝘁</a>
+                      </p>
+                      <p>
+                        2. 𝙆𝙣𝙤𝙬 𝙩𝙝𝙚 𝙍𝙪𝙡𝙚𝙨 | For your review: 👉
+                        <a target="_blank">𝘁𝗶𝗻𝘆𝘂𝗿𝗹.𝗰𝗼𝗺/𝗠𝗮𝗴𝗶𝘀𝗧𝗕𝗜𝗛𝗼𝘂𝘀𝗲𝗥𝘂𝗹𝗲𝘀</a>
+                      </p>
+                      <p>
+                        3. 𝙋𝙖𝙮𝙢𝙚𝙣𝙩 𝙋𝙤𝙡𝙞𝙘𝙮: 𝙉𝙤 𝙥𝙖𝙮𝙢𝙚𝙣𝙩, 𝙣𝙤 𝙪𝙨𝙖𝙜𝙚. This policy
+                        will be strictly enforced.
+                      </p>
+                      <p>
+                        4. 𝙍𝙚𝙨𝙚𝙧𝙫𝙖𝙩𝙞𝙤𝙣 𝙋𝙤𝙡𝙞𝙘𝙮: 𝘼𝙡𝙡 𝙗𝙤𝙤𝙠𝙞𝙣𝙜𝙨 𝙖𝙧𝙚 𝙗𝙮 𝙧𝙚𝙨𝙚𝙧𝙫𝙖𝙩𝙞𝙤𝙣
+                        𝙤𝙣𝙡𝙮. If you do not arrive within 30 minutes of your
+                        scheduled time without prior notice, your slot and
+                        payment will be forfeited.
+                      </p>
+
+                      <p>---</p>
+                      <p class="mt-2">
+                        𝗬𝗼𝘂 𝗺𝗮𝘆 𝗽𝗮𝘆 𝘂𝘀𝗶𝗻𝗴 𝗰𝗮𝘀𝗵 𝗼𝗿 𝗚𝗖𝗮𝘀𝗵 𝗳𝗼𝗿 𝘆𝗼𝘂𝗿 𝗯𝗼𝗼𝗸𝗶𝗻𝗴.
+                        𝗣𝗮𝘆𝗺𝗲𝗻𝘁 𝗺𝘂𝘀𝘁 𝗯𝗲 𝗱𝗼𝗻𝗲 𝗮𝘁 𝗹𝗲𝗮𝘀𝘁 𝟱 𝗵𝗼𝘂𝗿𝘀 𝗼𝗿 𝗲𝗮𝗿𝗹𝗶𝗲𝗿 𝗯𝗲𝗳𝗼𝗿𝗲
+                        𝘁𝗵𝗲 𝗯𝗼𝗼𝗸𝗶𝗻𝗴. Please send proof of payment to
+                        <a>magis_tbi@gbox.adnu.edu.ph</a>
+                        with the subject, "MAGIS TBI RESERVATION."
+                      </p>
+                      <p class="mt-1">
+                        GCash | Ryan Alvin Mercado, 09199924238
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!---->
+                <!---->
+                <section class="pt-6 px-2 sm:px-0 svelte-1dz83ln is-vertical">
+                  <div class="flex flex-col gap-3">
+                    <div>
+                      <div
+                        class="bg-white box mb-0 rounded-b-none shadow-none border-t border-r border-l rounded-t-lg flex justify-between"
+                      >
+                        <div class="text-gray-900 text-2xl font-semibold ml-1">
+                          Co-Working Space - High Desk
+                        </div>
+                        <div
+                          class="text-gray-900 text-2xl font-bold mr-1"
+                        ></div>
+                      </div>
+                      <!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🪑 High Desk (1 Hour)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            >
+                              Need a spot to plug in, focus, and get stuff done?
+                              Our High Desk Seats are made for solo hustlers,
+                              freelancers, remote workers, and startup founders
+                              who want a comfy perch with a pro vibe. Choose a
+                              seat number upon booking.
+                            </p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <!-- Clock icon (Tailwind + SVG, Svelte-friendly) -->
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >1 hour</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <!-- Coins icon (Tailwind + SVG, Svelte-friendly) -->
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱60</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🪑🪑 High Desk (4 Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >4 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱200</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc rounded-b-lg border-b"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🪑🪑🪑 High Desk (Whole Day)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >8 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱350</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!---->
+                    </div>
+                    <div>
+                      <div
+                        class="bg-white box mb-0 rounded-b-none shadow-none border-t border-r border-l rounded-t-lg flex justify-between"
+                      >
+                        <div class="text-gray-900 text-2xl font-semibold ml-1">
+                          Co-Working Space - Solo Desk
+                        </div>
+                        <div
+                          class="text-gray-900 text-2xl font-bold mr-1"
+                        ></div>
+                      </div>
+                      <!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              👤 Solo Desk (1 Hour)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            >
+                              Need a quiet corner to focus and do your thing?
+                              Our Solo Desk Seats are perfect for deep work,
+                              writing, designing, or just getting into your
+                              zone—no distractions, just good vibes. Choose a
+                              seat number upon booking.
+                            </p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >1 hour</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱60</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              👤👤 Solo Desk (4 Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >4 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱200</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc rounded-b-lg border-b"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              👤👤👤 Solo Desk (8 Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >8 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱350</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!---->
+                    </div>
+                    <div>
+                      <div
+                        class="bg-white box mb-0 rounded-b-none shadow-none border-t border-r border-l rounded-t-lg flex justify-between"
+                      >
+                        <div class="text-gray-900 text-2xl font-semibold ml-1">
+                          Co-Working Space - Shared Desk Seat
+                        </div>
+                        <div
+                          class="text-gray-900 text-2xl font-bold mr-1"
+                        ></div>
+                      </div>
+                      <!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🤝 Shared Desk (1 Hour)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            >
+                              For freelancers, remote workers, and startup
+                              founders who want a comfy perch with a pro
+                              vibe—our Shared Desk Seats offer the perfect
+                              balance of focus and community. Choose a seat
+                              number upon booking.
+                            </p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >1 hour</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱60</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🤝🤝 Shared Desk (4 Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >4 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱200</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc rounded-b-lg border-b"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🤝🤝🤝 Shared Desk (Whole Day)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >8 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱350</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!---->
+                    </div>
+                    <div>
+                      <div
+                        class="bg-white box mb-0 rounded-b-none shadow-none border-t border-r border-l rounded-t-lg flex justify-between"
+                      >
+                        <div class="text-gray-900 text-2xl font-semibold ml-1">
+                          Board Room
+                        </div>
+                        <div
+                          class="text-gray-900 text-2xl font-bold mr-1"
+                        ></div>
+                      </div>
+                      <!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🧠 Board Room (1 Hour)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            >
+                              Book the Board Room for your next big meeting,
+                              pitch, or team huddle! It’s the perfect spot for
+                              focused conversations, planning sessions, or
+                              making things official with clients or
+                              collaborators.
+                            </p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >1 hour</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱500</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🧠🧠 Board Room (Half Day - 4 Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >4 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱1800</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc rounded-b-lg border-b"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🧠🧠🧠 Board Room (Whole Day - 8 Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            ></p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >8 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱3000</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!---->
+                    </div>
+                    <div>
+                      <div
+                        class="bg-white box mb-0 rounded-b-none shadow-none border-t border-r border-l rounded-t-lg flex justify-between"
+                      >
+                        <div class="text-gray-900 text-2xl font-semibold ml-1">
+                          Whole Space Reservation(For events and functions)
+                        </div>
+                        <div
+                          class="text-gray-900 text-2xl font-bold mr-1"
+                        ></div>
+                      </div>
+                      <!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              🌅 Roofdeck Space (For events and functions - 4
+                              Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            >
+                              Looking for a fresh, open-air venue that gets the
+                              startup energy? Our Rooftop Space is the perfect
+                              spot for launch events, mixers, mini demo days,
+                              creative workshops, or just good ol’ community
+                              hangouts.
+                            </p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >4 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱4000</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!----><!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <!---->
+                      <div
+                        class="bg-white pack-with-columns mb-0 shadow-none border-t border-l border-r py-2 svelte-veh8jc rounded-b-lg border-b"
+                      >
+                        <div
+                          class="flex flex-col md:flex-row justify-between gap-3 md:gap-8 px-2 py-2 pb-1 svelte-veh8jc"
+                        >
+                          <div class="flex-1 flex-col flex gap-2 svelte-veh8jc">
+                            <h3
+                              class="font-medium text-black text-xl mb-1 svelte-veh8jc"
+                            >
+                              👥 Co-Working Space (For events and functions - 4
+                              Hours)
+                            </h3>
+                            <p
+                              class="text-gray-600 leading-relaxed svelte-veh8jc"
+                            >
+                              Hosting a startup event, bootcamp, hackathon, or
+                              creative collab session? Take over the entire
+                              MAGIS TBI Co-Working Space and make it your
+                              playground for innovation, connection, and
+                              next-level ideas.
+                            </p>
+                            <div
+                              class="flex flex-row gap-6 text-gray-600 font-medium leading-relaxed mt-3 svelte-veh8jc"
+                            >
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <circle cx="12" cy="12" r="9"></circle>
+                                  <path d="M12 7v5l3 2" />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc"
+                                  >4 hours</span
+                                >
+                              </div>
+                              <div
+                                class="svelte-veh8jc flex items-center gap-2"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  class="text-gray-500 w-4 h-4 svelte-veh8jc"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  aria-hidden="true"
+                                >
+                                  <ellipse
+                                    cx="12"
+                                    cy="6"
+                                    rx="7"
+                                    ry="3"
+                                  ></ellipse>
+                                  <path
+                                    d="M5 10c0 1.66 3.13 3 7 3s7-1.34 7-3M5 14c0 1.66 3.13 3 7 3s7-1.34 7-3"
+                                  />
+                                </svg>
+                                <span class="text-sm svelte-veh8jc">₱4000</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex w-full md:w-auto items-center svelte-veh8jc"
+                          >
+                            <button
+                              class="px-6 button w-full md:w-auto border-0 rounded-lg text-white hover:text-white focus:text-white hover:text-white hover:text-white focus:text-white font-semibold hover:opacity-80 svelte-veh8jc"
+                              style="background-color: rgb(62, 142, 208)"
+                            >
+                              Book now
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!----><!---->
+                    </div>
+                    <!---->
+                    <!---->
+                    <!---->
+                  </div>
+                  <!---->
+                </section>
+                <!---->
+                <!----><!--]-->
+              </div>
+              <!--[!--><!--]-->
+              <!--[!--><!--]-->
+              <!--[!--><!--]--><!---->
+            </section>
+          </div>
+          <!--[!--><!--]-->
+        </div>
+      </div>
+      <!----><!----><!--]--></astro-island
+    >
+    <iframe
+      name="__privateStripeMetricsController2310"
+      frameborder="0"
+      allowtransparency="true"
+      scrolling="no"
+      role="presentation"
+      allow="payment *"
+      src="./Lapsula_files/m-outer-3437aaddcdf6922d623e172c2d6f9278.html"
+      aria-hidden="true"
+      tabindex="-1"
+      style="
+        border: none !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 1px !important;
+        min-width: 100% !important;
+        overflow: hidden !important;
+        display: block !important;
+        visibility: hidden !important;
+        position: fixed !important;
+        height: 1px !important;
+        pointer-events: none !important;
+        user-select: none !important;
+      "
+    ></iframe>
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 hidden bg-black/50 z-50">
+      <div
+        class="bg-white max-w-3xl mx-auto mt-20 rounded-lg shadow-lg overflow-hidden"
+      >
+        <div class="flex justify-between items-center px-4 py-3 border-b">
+          <h2 class="text-xl font-semibold">Reserve</h2>
+          <button id="bookingClose" class="text-gray-500 hover:text-gray-700">
+            ✕
+          </button>
+        </div>
+        <!-- Step 1: Selection -->
+        <div id="bookingStepSelect" class="p-4 space-y-6">
+          <div id="bookingOffering" class="text-sm text-gray-600"></div>
+          <div>
+            <div class="text-sm font-semibold text-gray-700 mb-2">
+              Pick a date
+            </div>
+            <div
+              id="calendarStrip"
+              class="flex overflow-x-auto no-scrollbar gap-2 py-2"
+            ></div>
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-gray-700 mb-2">
+              Choose a desk
+            </div>
+            <div id="deskGrid" class="grid grid-cols-3 gap-2"></div>
+          </div>
+          <div>
+            <div class="text-sm font-semibold text-gray-700 mb-2">
+              Select a time
+            </div>
+            <div class="flex gap-6">
+              <div class="flex-1">
+                <div class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+                  Morning
+                </div>
+                <div id="morningSlots" class="flex flex-wrap gap-2"></div>
+              </div>
+              <div class="flex-1">
+                <div class="text-xs uppercase tracking-wide text-gray-500 mb-2">
+                  Afternoon
+                </div>
+                <div id="afternoonSlots" class="flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end gap-3 pt-2">
+            <button
+              id="bookingConfirm"
+              class="px-4 py-2 rounded-md bg-primary text-white disabled:opacity-50"
+              disabled
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+        <!-- Step 2: Details -->
+        <div id="bookingStepDetails" class="p-4 space-y-4 hidden">
+          <div>
+            <div class="text-sm font-semibold text-gray-700">
+              Booking Details
+            </div>
+            <div id="bookingSummary" class="mt-2 text-sm text-gray-700"></div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="text-sm font-medium">Full name *</label>
+              <input
+                id="bd_name"
+                type="text"
+                class="mt-1 w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label class="text-sm font-medium">Email *</label>
+              <input
+                id="bd_email"
+                type="email"
+                class="mt-1 w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label class="text-sm font-medium">Phone *</label>
+              <div class="mt-1 flex">
+                <span
+                  class="inline-flex items-center rounded-l-md border border-r-0 bg-gray-50 px-3 text-sm"
+                  >+63</span
+                >
+                <input
+                  id="bd_phone"
+                  type="tel"
+                  class="w-full rounded-r-md border px-3 py-2"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label class="text-sm font-medium"
+                >Company/School/Organization *</label
+              >
+              <input
+                id="bd_org"
+                type="text"
+                class="mt-1 w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label class="text-sm font-medium">Role/Designation *</label>
+              <input
+                id="bd_role"
+                type="text"
+                class="mt-1 w-full rounded-md border px-3 py-2"
+                required
+              />
+            </div>
+            <div>
+              <label class="text-sm font-medium"
+                >Are you a startup incubatee at ADNU - MAGIS TBI? *</label
+              >
+              <div class="mt-1 flex gap-4">
+                <label class="inline-flex items-center gap-2"
+                  ><input type="radio" name="bd_incubatee" value="Yes" />
+                  <span>Yes.</span></label
+                >
+                <label class="inline-flex items-center gap-2"
+                  ><input type="radio" name="bd_incubatee" value="No" />
+                  <span>No.</span></label
+                >
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="text-sm font-medium"
+                >If yes, what is your startup/team name?</label
+              >
+              <input
+                id="bd_team"
+                type="text"
+                class="mt-1 w-full rounded-md border px-3 py-2"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="text-sm font-medium">Facebook Account</label>
+              <input
+                id="bd_fb"
+                type="text"
+                class="mt-1 w-full rounded-md border px-3 py-2"
+              />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="text-sm font-medium">Notes/Instructions</label>
+              <textarea
+                id="bd_notes"
+                class="mt-1 w-full rounded-md border px-3 py-2"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="inline-flex items-center gap-2 text-sm"
+                ><input id="bd_remember" type="checkbox" />
+                <span>Remember data for next bookings</span></label
+              >
+            </div>
+          </div>
+          <div class="flex justify-between pt-2">
+            <button id="bookingBack" class="px-4 py-2 rounded-md border">
+              Back
+            </button>
+            <button
+              id="bookingSubmit"
+              class="px-4 py-2 rounded-md bg-primary text-white"
+            >
+              Submit Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const modal = document.getElementById("bookingModal");
+        const closeBtn = document.getElementById("bookingClose");
+        const confirmBtn = document.getElementById("bookingConfirm");
+        const calendarStrip = document.getElementById("calendarStrip");
+        const deskGrid = document.getElementById("deskGrid");
+        const morningSlots = document.getElementById("morningSlots");
+        const afternoonSlots = document.getElementById("afternoonSlots");
+        const stepSelect = document.getElementById("bookingStepSelect");
+        const stepDetails = document.getElementById("bookingStepDetails");
+        const offeringEl = document.getElementById("bookingOffering");
+        const summaryEl = document.getElementById("bookingSummary");
+        const backBtn = document.getElementById("bookingBack");
+        const submitBtn = document.getElementById("bookingSubmit");
+
+        const state = { offering: null, date: null, desk: null, time: null };
+
+        function openModal(offering) {
+          state.offering = offering || null;
+          offeringEl.textContent = offering || "";
+          state.date = null;
+          state.desk = null;
+          state.time = null;
+          renderCalendar();
+          renderDesks();
+          renderSlots();
+          updateConfirm();
+          stepDetails.classList.add("hidden");
+          stepSelect.classList.remove("hidden");
+          modal.classList.remove("hidden");
+        }
+        function closeModal() {
+          modal.classList.add("hidden");
+        }
+        closeBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+
+        // Attach handlers to all Book now buttons
+        document.querySelectorAll("button").forEach((btn) => {
+          if (
+            btn.textContent &&
+            btn.textContent.trim().toLowerCase() === "book now"
+          ) {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              const card = btn.closest(".pack-with-columns");
+              const title = card
+                ? card.querySelector("h3")?.textContent?.trim()
+                : null;
+              openModal(title);
+            });
+          }
+        });
+
+        function renderCalendar() {
+          calendarStrip.innerHTML = "";
+          const today = new Date();
+          for (let i = 0; i < 30; i++) {
+            const d = new Date(today);
+            d.setDate(today.getDate() + i);
+            const label = d.toLocaleDateString(undefined, {
+              month: "short",
+              day: "numeric",
+            });
+            const btn = document.createElement("button");
+            btn.className =
+              "px-3 py-2 rounded-md border text-sm hover:bg-gray-50";
+            btn.textContent = label;
+            btn.addEventListener("click", () => {
+              state.date = d;
+              highlightSelection(calendarStrip, btn);
+              updateConfirm();
+            });
+            calendarStrip.appendChild(btn);
+          }
+        }
+
+        function renderDesks() {
+          deskGrid.innerHTML = "";
+          for (let i = 1; i <= 6; i++) {
+            const btn = document.createElement("button");
+            btn.className = "px-3 py-2 rounded-md border hover:bg-gray-50";
+            btn.textContent = "Desk " + i;
+            btn.addEventListener("click", () => {
+              state.desk = i;
+              highlightSelection(deskGrid, btn);
+              updateConfirm();
+            });
+            deskGrid.appendChild(btn);
+          }
+        }
+
+        function renderSlots() {
+          const makeSlot = (h, m) => {
+            const btn = document.createElement("button");
+            const mm = String(m).padStart(2, "0");
+            const period = h >= 12 ? "PM" : "AM";
+            const hour12 = h % 12 || 12;
+            const display = `${hour12}:${mm} ${period}`;
+            const value = `${String(h).padStart(2, "0")}:${mm}`; // store 24h internally
+            btn.textContent = display;
+            btn.className =
+              "px-3 py-2 rounded-md border text-sm hover:bg-gray-50";
+            btn.addEventListener("click", () => {
+              state.time = value;
+              highlightSelection(morningSlots, btn);
+              highlightSelection(afternoonSlots, btn);
+              updateConfirm();
+            });
+            return btn;
+          };
+
+          morningSlots.innerHTML = "";
+          afternoonSlots.innerHTML = "";
+          // Morning: 08:00, 09:00, 10:00, 11:00
+          [8, 9, 10, 11].forEach((h) => {
+            morningSlots.appendChild(makeSlot(h, 0));
+          });
+          // Afternoon: 13:00, 14:00, 15:00, 16:00
+          [13, 14, 15, 16].forEach((h) => {
+            afternoonSlots.appendChild(makeSlot(h, 0));
+          });
+        }
+
+        function highlightSelection(container, activeBtn) {
+          if (!container) return;
+          Array.from(container.querySelectorAll("button")).forEach((b) => {
+            b.classList.remove("bg-primary", "text-white", "border-primary");
+          });
+          if (activeBtn) {
+            activeBtn.classList.add(
+              "bg-primary",
+              "text-white",
+              "border-primary"
+            );
+          }
+        }
+
+        function updateConfirm() {
+          const ready = !!(state.date && state.desk && state.time);
+          confirmBtn.disabled = !ready;
+        }
+
+        // Advance to details step
+        confirmBtn.addEventListener("click", () => {
+          if (confirmBtn.disabled) return;
+          const dateLabel = state.date
+            ? state.date.toLocaleDateString(undefined, {
+                month: "short",
+                day: "numeric",
+              })
+            : "";
+          summaryEl.innerHTML = `
+            <div class="flex flex-col gap-1">
+              <div><span class=\"font-medium\">Offering:</span> ${
+                state.offering || ""
+              }</div>
+              <div><span class=\"font-medium\">Date:</span> ${dateLabel}</div>
+              <div><span class=\"font-medium\">Desk:</span> ${state.desk}</div>
+              <div><span class=\"font-medium\">Time:</span> ${state.time}</div>
+            </div>`;
+          stepSelect.classList.add("hidden");
+          stepDetails.classList.remove("hidden");
+          // Prefill remembered data
+          try {
+            const saved = JSON.parse(
+              localStorage.getItem("bookingProfile") || "{}"
+            );
+            if (saved) {
+              const map = {
+                bd_name: "name",
+                bd_email: "email",
+                bd_phone: "phone",
+                bd_org: "org",
+                bd_role: "role",
+                bd_team: "team",
+                bd_fb: "fb",
+                bd_notes: "notes",
+              };
+              Object.entries(map).forEach(([id, key]) => {
+                const el = document.getElementById(id);
+                if (el && saved[key]) el.value = saved[key];
+              });
+              if (saved.incubatee) {
+                const radio = stepDetails.querySelector(
+                  `input[name=\"bd_incubatee\"][value=\"${saved.incubatee}\"]`
+                );
+                if (radio) radio.checked = true;
+              }
+              const remember = document.getElementById("bd_remember");
+              if (remember) remember.checked = !!saved.remember;
+            }
+          } catch {}
+        });
+
+        backBtn.addEventListener("click", () => {
+          stepDetails.classList.add("hidden");
+          stepSelect.classList.remove("hidden");
+        });
+
+        submitBtn.addEventListener("click", () => {
+          const requiredIds = [
+            "bd_name",
+            "bd_email",
+            "bd_phone",
+            "bd_org",
+            "bd_role",
+          ];
+          for (const id of requiredIds) {
+            const el = document.getElementById(id);
+            if (!el || !el.value.trim()) {
+              el && el.focus();
+              alert("Please fill all required fields.");
+              return;
+            }
+          }
+          const data = {
+            offering: state.offering,
+            date: state.date ? state.date.toISOString() : null,
+            desk: state.desk,
+            time: state.time,
+            name: document.getElementById("bd_name").value.trim(),
+            email: document.getElementById("bd_email").value.trim(),
+            phone: document.getElementById("bd_phone").value.trim(),
+            org: document.getElementById("bd_org").value.trim(),
+            role: document.getElementById("bd_role").value.trim(),
+            incubatee:
+              (
+                stepDetails.querySelector(
+                  'input[name="bd_incubatee"]:checked'
+                ) || {}
+              ).value || "",
+            team: document.getElementById("bd_team").value.trim(),
+            fb: document.getElementById("bd_fb").value.trim(),
+            notes: document.getElementById("bd_notes").value.trim(),
+            remember: document.getElementById("bd_remember").checked,
+          };
+          if (data.remember) {
+            const profile = {
+              name: data.name,
+              email: data.email,
+              phone: data.phone,
+              org: data.org,
+              role: data.role,
+              incubatee: data.incubatee,
+              team: data.team,
+              fb: data.fb,
+              notes: data.notes,
+              remember: true,
+            };
+            localStorage.setItem("bookingProfile", JSON.stringify(profile));
+          }
+          alert("Booking submitted!\n\n" + JSON.stringify(data, null, 2));
+          closeModal();
+        });
+      })();
+    </script>
+  </body>
+</html>
