@@ -1,0 +1,10 @@
+{
+  "buildCommand": "echo 'Static site - no build needed'",
+  "outputDirectory": "MaigsTBI_CLONE",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ]
+}
