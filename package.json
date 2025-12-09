@@ -4,8 +4,8 @@
   "description": "ADNU MAGIS Technology Business Incubator website",
   "main": "index.html",
   "scripts": {
-    "dev": "echo 'Static site - open MaigsTBI_CLONE/magis_clone.html in browser'",
-    "start": "echo 'Static site - open MaigsTBI_CLONE/magis_clone.html in browser'",
+    "dev": "echo 'Static site - open index.html in browser'",
+    "start": "echo 'Static site - open index.html in browser'",
     "build": "echo 'No build needed for static site'"
   },
   "keywords": [

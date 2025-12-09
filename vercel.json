@@ -1,10 +1,5 @@
 {
-  "buildCommand": "echo 'Static site - no build needed'",
-  "outputDirectory": "MaigsTBI_CLONE",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
-  ]
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "cleanUrls": false
 }
